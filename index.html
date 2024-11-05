@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="navigation">
+      <img src="./Gohigher.svg" height="60" alt="" />
+
+      <div class="last-item">
+        <button style="font-size: 15px" class="settingss">
+          <i class="fa fa-calendar fa-2x"></i> Tasks
+        </button>
+        <button style="font-size: 15px" class="settings">
+          <i class="fa fa-cog fa-2x"></i> Settings
+        </button>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <div class="box">
+        <i class="fa fa-close"></i>
+        <div class="heading">
+          <h1>Settings</h1>
+          <p>Adjust the timers as you see fit. Have a productive session.</p>
+        </div>
+
+        <div class="full">
+          <div class="flex-btn">
+            <button class="btn-1"><i class="fa fa-cog"></i> General</button>
+            <button class="btn-2">
+              <i class="fa fa-google"></i> Appearance
+            </button>
+          </div>
+
+          <form action="" class="form">
+            <div class="first-item">
+              <label for="" style="font-weight: 800"
+                ><i class="fa fa-shower"></i> Descrption Session</label
+              >
+              <!-- <input type="text" value="25" class="input-item" /> -->
+              <input
+                type="text"
+                id="description"
+                placeholder="Eg Transportation"
+                required
+                class="input-item"
+              />
+            </div>
+
+            <div class="second-item">
+              <label for="" style="font-weight: 800"
+                >💰 Money Time</label
+              >
+              <!-- <input type="text" value="25" class="input-item" /> -->
+              <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required
+                class="input-item"
+                value="2000"
+              />
+            </div>
+          </form>
+          <!-- <form action="" class="form">
+            <div class="first-item">
+              <label for="" style="font-weight: 800"
+                ><i class="fa fa-shower"></i>Deep Work Session</label
+              >
+              <input type="text" value="25" class="input-item"/>
+            </div>
+
+            <div class="second-item">
+              <label for="" style="font-weight: 800"
+                ><i class="fa fa-shower"></i>Deep Work Session</label
+              >
+              <input type="text" value="25" class="input-item"/>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Financial Tracker</h1>
+      <form id="transaction-form">
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+
+      <h2>Transaction History</h2>
+      <table id="transaction-history">
+        <tr>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Type</th>
+        </tr>
+        <!-- Transactions will be added here dynamically -->
+      </table>
+
+      <h2>Spending Chart</h2>
+      <canvas id="spending-chart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
