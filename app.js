@@ -145,7 +145,7 @@ function updateTransactionTable() {
     table.innerHTML = `
         <tr>
             <th>Description</th>
-            <th>Amount</th>
+            <th>Amounts</th>
             <th>Type</th>
         </tr>
     `; // Reset table header
